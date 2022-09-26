@@ -1,2 +1,2 @@
 # Python
- Ejercicios en Python oriendatos a analisis de datos y machine learning
+ Ejercicios en Python orientados a analisis de datos y machine learning
