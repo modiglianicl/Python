@@ -1,0 +1,92 @@
+category,item,city,country,cost,sort item
+"Party night","2 Longdrinks","Zurich","Switzerland","36,03",1
+"Party night","2 Longdrinks","Paris","France","29,6",1
+"Party night","2 Longdrinks","Rio de Janeiro","Brazil","18,49",1
+"Party night","2 Longdrinks","New York","USA",32,1
+"Party night","2 Longdrinks","Moscow","Russia","15,83",1
+"Party night","2 Longdrinks","Stockholm","Sweden","34,3",1
+"Party night","2 Longdrinks","Sydney","Australia","28,3",1
+"Party night","2 Longdrinks","Mexico City","Mexico","11,6",1
+"Party night","2 Longdrinks","Hong Kong","Hong Kong","27,59",1
+"Party night","2 Longdrinks","Miami","USA",32,1
+"Party night","2 Longdrinks","Prague","Czech Republic","14,48",1
+"Party night","2 Longdrinks","Tokyo","Japan","18,94",1
+"Party night","2 Longdrinks","Barcelona","Spain","24,67",1
+"Party night","Big Mac","Prague","Czech Republic","3,74",2
+"Party night","Big Mac","Rio de Janeiro","Brazil","5,61",2
+"Party night","Big Mac","Zurich","Switzerland","6,89",2
+"Party night","Big Mac","Paris","France","5,37",2
+"Party night","Big Mac","New York","USA","5,09",2
+"Party night","Big Mac","Stockholm","Sweden","5,62",2
+"Party night","Big Mac","Barcelona","Spain","4,75",2
+"Party night","Big Mac","Miami","USA","4,81",2
+"Party night","Big Mac","Sydney","Australia","4,42",2
+"Party night","Big Mac","Moscow","Russia","2,29",2
+"Party night","Big Mac","Hong Kong","Hong Kong","2,87",2
+"Party night","Big Mac","Tokyo","Japan","3,5",2
+"Party night","Big Mac","Mexico City","Mexico","3,01",2
+"Party night","Club entry","Zurich","Switzerland","26,5",3
+"Party night","Club entry","Mexico City","Mexico","3,22",3
+"Party night","Club entry","Miami","USA",40,3
+"Party night","Club entry","Hong Kong","Hong Kong","25,55",3
+"Party night","Club entry","Rio de Janeiro","Brazil","14,76",3
+"Party night","Club entry","Prague","Czech Republic","19,44",3
+"Party night","Club entry","Paris","France","14,8",3
+"Party night","Club entry","Tokyo","Japan","18,58",3
+"Party night","Club entry","Barcelona","Spain","24,67",3
+"Party night","Club entry","New York","USA",25,3
+"Party night","Club entry","Sydney","Australia","19,66",3
+"Party night","Club entry","Moscow","Russia","1,32",3
+"Party night","Club entry","Stockholm","Sweden","27,14",3
+"Party night","Taxi","Zurich","Switzerland","24,38",4
+"Party night","Taxi","Hong Kong","Hong Kong","6,32",4
+"Party night","Taxi","Barcelona","Spain","10,92",4
+"Party night","Taxi","Sydney","Australia","10,4",4
+"Party night","Taxi","Mexico City","Mexico","2,52",4
+"Party night","Taxi","Miami","USA","10,37",4
+"Party night","Taxi","Moscow","Russia","7,12",4
+"Party night","Taxi","Stockholm","Sweden","19,91",4
+"Party night","Taxi","New York","USA","16,53",4
+"Party night","Taxi","Rio de Janeiro","Brazil","5,21",4
+"Party night","Taxi","Prague","Czech Republic","8,63",4
+"Party night","Taxi","Tokyo","Japan","17,02",4
+"Party night","Taxi","Paris","France","11,06",4
+"Date night","Cinema entry","Miami","USA","12,41",1
+"Date night","Cinema entry","Rio de Janeiro","Brazil","8,48",1
+"Date night","Cinema entry","Prague","Czech Republic","9,43",1
+"Date night","Cinema entry","Tokyo","Japan","16,73",1
+"Date night","Cinema entry","Paris","France","13,15",1
+"Date night","Cinema entry","Barcelona","Spain","11,87",1
+"Date night","Cinema entry","Zurich","Switzerland","19,61",1
+"Date night","Cinema entry","Stockholm","Sweden","16,19",1
+"Date night","Cinema entry","New York","USA","16,33",1
+"Date night","Cinema entry","Mexico City","Mexico","4,21",1
+"Date night","Cinema entry","Hong Kong","Hong Kong","13,57",1
+"Date night","Cinema entry","Moscow","Russia","8,22",1
+"Date night","Cinema entry","Sydney","Australia","13,96",1
+"Date night","Dinner","Sydney","Australia","78,62",2
+"Date night","Dinner","Stockholm","Sweden","111,04",2
+"Date night","Dinner","Zurich","Switzerland","106,51",2
+"Date night","Dinner","Tokyo","Japan","121,26",2
+"Date night","Dinner","Barcelona","Spain","69,38",2
+"Date night","Dinner","New York","USA","144,03",2
+"Date night","Dinner","Miami","USA","93,48",2
+"Date night","Dinner","Rio de Janeiro","Brazil","57,02",2
+"Date night","Dinner","Moscow","Russia","57,26",2
+"Date night","Dinner","Hong Kong","Hong Kong","75,42",2
+"Date night","Dinner","Paris","France","85,11",2
+"Date night","Dinner","Mexico City","Mexico","55,51",2
+"Date night","Dinner","Prague","Czech Republic","53,46",2
+"Date night","Drinks at Dinner","Stockholm","Sweden","58,6",3
+"Date night","Drinks at Dinner","Tokyo","Japan","62,18",3
+"Date night","Drinks at Dinner","Barcelona","Spain","21,28",3
+"Date night","Drinks at Dinner","Miami","USA","42,12",3
+"Date night","Drinks at Dinner","Hong Kong","Hong Kong","24,64",3
+"Date night","Drinks at Dinner","Paris","France","40,09",3
+"Date night","Drinks at Dinner","Prague","Czech Republic","23,63",3
+"Date night","Drinks at Dinner","Moscow","Russia","43,93",3
+"Date night","Drinks at Dinner","Mexico City","Mexico","25,1",3
+"Date night","Drinks at Dinner","New York","USA","38,45",3
+"Date night","Drinks at Dinner","Zurich","Switzerland","52,99",3
+"Date night","Drinks at Dinner","Sydney","Australia","34,59",3
+"Date night","Drinks at Dinner","Rio de Janeiro","Brazil","30,2",3
