@@ -115,4 +115,4 @@ tabla_final["PRECIO"] = tabla_final["PRECIO"].str.replace(".","",regex=True)
 tabla_final["PRECIO"] = tabla_final["PRECIO"].str.strip()
 
 ### Agregando la info a un dataset ya existente
-tabla_final.to_csv("C:/Users/chuck/Documents/Clases y cursos/Python/Codeacademy/Webscraping/Proyecto/data-pan.csv",mode="a",index=False,header=False) # Ojo, es mejor asignat la ruta completa!, funciona sin ruta si estamos trabajando en una carepta de proyecto.
+tabla_final.to_csv("data-pan.csv",mode="a",index=False,header=False) 
