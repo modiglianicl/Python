@@ -14,4 +14,4 @@ Para MAC, googlear (jaja)
 # Geopy y Google Geocoding API
 
 También subí un notebook jupyter usando la API de Google Geocoding para obtener las coordenadas usando las direcciones, para luego agregarlo al dataset scrapeado.
-Las direcciones que tiren error dejará las coordenadas (0,0) , estas deberán ser buscadas manualmente, recomiendo google maps.
+Las direcciones que tiren error dejará las coordenadas (0,0) , estas deberán ser buscadas manualmente, recomiendo google maps. NECESITARAS TU API KEY la cual la puedes obtener de https://code.google.com/apis/console
