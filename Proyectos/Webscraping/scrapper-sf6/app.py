@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import Select
+import math
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
@@ -35,33 +36,33 @@ def sf6_scrap(continente):
     opts.add_argument("--enable-javascript")
     opts.add_experimental_option("excludeSwitches", ["enable-automation"])
     opts.add_experimental_option("detach",True)
-    opts.add_argument("user-data-dir=C:\\aqui va tu carpeta de perfil de chrome") # Usamos las cookies y perfiles de nuestro chrome, asi ya estamos logeados.
-    # La direccion de la carpeta de chrome es C:\\Users\\Usuario\\AppData\\Local\\Google\\Chrome\\User Data
+    opts.add_argument("user-data-dir=C:\\Users\\chuck\\AppData\\Local\\Google\\Chrome\\User Data") # Usamos las cookies y perfiles de nuestro chrome, asi ya estamos logeados.
 
 
 
     # Obteniendo página con selenium, al parecer CAPCOM no quiere scrappers :(
     driver = webdriver.Chrome(options=opts)
-    scrap_url = f"https://www.streetfighter.com/6/buckler/es-es/ranking/master?character_filter=1&character_id=luke&platform=1&home_filter={homefilter}&home_category_id={continente}&home_id=1&page=1"
+    scrap_url = f"https://www.streetfighter.com/6/buckler/es-es/ranking/master?character_filter=1&character_id=luke&platform=1&home_filter={homefilter}&home_category_id={continente}&home_id=1&page=1&season_type=2"
     driver.get(scrap_url)
     time.sleep(5)
     item_scrap_soup = BeautifulSoup(driver.page_source,"lxml")
     # Cantidad de paginas. Cada pagina muestra 20 resultados.
     ## Nota, uso modulo, ya que si modulo es entre 1 y 19, significa que necesitamos una pagina adicional, si modulo es 0, necesitamos el resultado solo dividido por 20.
     sobrantes = (int(item_scrap_soup.find('span',class_='ranking_ranking_now__last__TghLM').text.replace('/ ','')))%20
-    paginas_totales = int(round((int(item_scrap_soup.find('span',class_='ranking_ranking_now__last__TghLM').text.replace('/ ',''))/20),0))
+    paginas_pre = int(item_scrap_soup.find('span',class_='ranking_ranking_now__last__TghLM').text.replace('/ ',''))/20 # Calculamos, nos da un float
+    paginas_totales =  math.floor(paginas_pre) # Redondea hacia abajo
     if 1 <= sobrantes <= 19:
         paginas_totales = paginas_totales + 1
     print(f"La cantidad de páginas a scrapear son : {paginas_totales} páginas!")
 
     # Preparamos DataFrame a llenar junto al archivo
-    df = pd.DataFrame(columns=["jugador","cfn_id","personaje","pais","mr"])
+    df = pd.DataFrame(columns=["jugador","cfn_id","personaje","pais","mr","continente"])
     df.to_csv("./db_sf6_sudamerica_mr.csv",index=False,header=True)
 
     # Iteramos sobre todas las paginas para obtener todo
     for i in range(1,paginas_totales):
         pagina_actual = i
-        scrap_url = f"https://www.streetfighter.com/6/buckler/es-es/ranking/master?character_filter=1&character_id=luke&platform=1&home_filter={homefilter}&home_category_id={continente}&home_id=1&page="+str(i)
+        scrap_url = f"https://www.streetfighter.com/6/buckler/es-es/ranking/master?character_filter=1&character_id=luke&platform=1&home_filter={homefilter}&home_category_id={continente}&home_id=1&page="+str(i)+"&season_type=2"
         driver.get(scrap_url)
         time.sleep(5)
         item_scrap_soup = BeautifulSoup(driver.page_source,"lxml")
@@ -82,10 +83,11 @@ def sf6_scrap(continente):
 
         ## I.c Personaje
         personajes = []
-        personajes_raw = item_scrap_soup.find_all('span',class_='ranking_image__NBMu1')
+        personajes_raw = item_scrap_soup.find_all('div',class_='ranking_character__zqCCf')
         for i in range(1,len(personajes_raw)):
             personaje_final = personajes_raw[i].find('img',alt=True)['alt']
             personajes.append(personaje_final)
+        
 
         ## I.d Pais
         paises = []
@@ -107,6 +109,7 @@ def sf6_scrap(continente):
         df['personaje'] = personajes
         df['pais'] = paises
         df['mr'] = master_points
+        df['continente'] = continente
         
         print(f'Resultados para la pagina {pagina_actual}')
         for i in range(0,len(jugadores)):
