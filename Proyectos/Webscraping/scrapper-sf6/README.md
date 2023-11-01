@@ -8,7 +8,7 @@ Analisis exploratorio realizado en python que muestra un poco la realidad del ra
 El csv muestra la información obtenida por el scrapper (Nombre jugador, ID, Personaje, Pais, MR)
 
 # NOTA
-Recomiendo usar el perfil de chrome si se quiere usar el scrapper, ya que pide logeo de CAPCOM ID y lo facilita mucho. La información es del 07/10/23
+Recomiendo usar el perfil de chrome si se quiere usar el scrapper, ya que pide logeo de CAPCOM ID y lo facilita mucho.
 
 # Visualización
 Cree un reporte en Tableau Public para lograr una mayor interactividad y visualización de los datos obtenidos.
