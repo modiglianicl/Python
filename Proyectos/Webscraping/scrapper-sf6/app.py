@@ -42,7 +42,7 @@ def sf6_scrap(continente):
 
     # Obteniendo página con selenium, al parecer CAPCOM no quiere scrappers :(
     driver = webdriver.Chrome(options=opts)
-    scrap_url = f"https://www.streetfighter.com/6/buckler/es-es/ranking/master?character_filter=1&character_id=luke&platform=1&home_filter={homefilter}&home_category_id={continente}&home_id=1&page=1&season_type=2"
+    scrap_url = f"https://www.streetfighter.com/6/buckler/es-es/ranking/master?character_filter=1&character_id=luke&platform=1&home_filter={homefilter}&home_category_id={continente}&home_id=1&page=1"
     driver.get(scrap_url)
     time.sleep(5)
     item_scrap_soup = BeautifulSoup(driver.page_source,"lxml")
@@ -62,7 +62,7 @@ def sf6_scrap(continente):
     # Iteramos sobre todas las paginas para obtener todo
     for i in range(1,paginas_totales):
         pagina_actual = i
-        scrap_url = f"https://www.streetfighter.com/6/buckler/es-es/ranking/master?character_filter=1&character_id=luke&platform=1&home_filter={homefilter}&home_category_id={continente}&home_id=1&page="+str(i)+"&season_type=2"
+        scrap_url = f"https://www.streetfighter.com/6/buckler/es-es/ranking/master?character_filter=1&character_id=luke&platform=1&home_filter={homefilter}&home_category_id={continente}&home_id=1&page="+str(i)
         driver.get(scrap_url)
         time.sleep(5)
         item_scrap_soup = BeautifulSoup(driver.page_source,"lxml")
