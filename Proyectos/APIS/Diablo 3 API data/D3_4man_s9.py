@@ -15,7 +15,7 @@ def create_access_token(client_id, client_secret, region = 'us'):
     return response.json()
 
 
-access_token = create_access_token("8d326e6f147f498f8c1d400284d9adda","DNKCsnqQEnaPWnVwnQ76cU7mg4k5UZSL")['access_token']
+access_token = create_access_token("PONER CLIENT_ID ACA","PONER CLIENTE_SECRET ACA")['access_token']
 
 headers = {"Authorization" : f"Bearer {access_token}"}
 url_wow = "https://us.api.blizzard.com/data/d3/season/9/leaderboard/rift-team-4?namespace=2-6-US"
