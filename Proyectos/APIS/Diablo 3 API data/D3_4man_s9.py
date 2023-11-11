@@ -1,3 +1,4 @@
+# Librerias
 import requests
 import pandas as pd
 from requests.auth import HTTPBasicAuth
@@ -15,7 +16,6 @@ def create_access_token(client_id, client_secret, region = 'us'):
 
 
 access_token = create_access_token("8d326e6f147f498f8c1d400284d9adda","DNKCsnqQEnaPWnVwnQ76cU7mg4k5UZSL")['access_token']
-print(create_access_token("8d326e6f147f498f8c1d400284d9adda","DNKCsnqQEnaPWnVwnQ76cU7mg4k5UZSL"))
 
 headers = {"Authorization" : f"Bearer {access_token}"}
 url_wow = "https://us.api.blizzard.com/data/d3/season/9/leaderboard/rift-team-4?namespace=2-6-US"
@@ -26,16 +26,18 @@ print(response.status_code)
 data = response.json()
 data_json = json.dumps(data,indent=4)
 
+# Obteniendo cantidad de jugadores por equipo y cantidad de equipos
 players_x_team= len(data['row'][0]['player'])
 n_teams = len(data['row'])
 
 print(players_x_team)
 print(n_teams)
 
+# Futuras listas para cread DF's
 ranking = []
 groups = []
 
-
+# Obteniendo datos
 for k in range(0,n_teams):
     ranking.append(k+1)
     group_raw = []
@@ -52,6 +54,7 @@ for k in range(0,n_teams):
                     group_raw.append(data['row'][k]['player'][i]['data'][0]['number'])
     groups.append(group_raw)
 
+# Probando
 for i in range(0,50):
     print(f"Rift Group Rank : {ranking[i]}")
     print("------------------")

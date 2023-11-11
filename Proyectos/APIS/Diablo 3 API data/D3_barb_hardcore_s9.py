@@ -1,3 +1,4 @@
+# Librerias
 import requests
 import pandas as pd
 from requests.auth import HTTPBasicAuth
@@ -14,7 +15,6 @@ def create_access_token(client_id, client_secret, region = 'us'):
 
 
 access_token = create_access_token("8d326e6f147f498f8c1d400284d9adda","DNKCsnqQEnaPWnVwnQ76cU7mg4k5UZSL")['access_token']
-print(create_access_token("8d326e6f147f498f8c1d400284d9adda","DNKCsnqQEnaPWnVwnQ76cU7mg4k5UZSL"))
 
 # Parametros para el requests
 
