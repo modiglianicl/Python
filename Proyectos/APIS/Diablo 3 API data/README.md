@@ -1,5 +1,5 @@
 # DIABLO 3 API
-API que requiere client secret y client id. Probando obteniendo datos de Diablo 3 ya que no requiere OAuth (y aún estoy aprendiendo como usarlo)
+API que requiere client secret y client id.
 
 # D3_4man_s9.py
 Request a la leadearboard de grupos de a 4 de la season 9 NO HC.
